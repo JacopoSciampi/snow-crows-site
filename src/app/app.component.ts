@@ -28,8 +28,6 @@ export class AppComponent implements OnInit {
             // TODO with ngIf & dynamic components
             this.resetDropdownNavbarStuff();
         }
-
-        console.log(this.showDropdown);
     }
 
     private resetDropdownNavbarStuff(): void {
