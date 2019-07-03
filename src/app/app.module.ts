@@ -1,23 +1,22 @@
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { NavbarService } from './shared/components/navbar/navbar.service';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { HomeInfoComponent } from './shared/components/_home/_home/info/home.info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeInfoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule
   ],
-  providers: [
-    NavbarService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

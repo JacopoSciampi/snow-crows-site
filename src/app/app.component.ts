@@ -1,5 +1,4 @@
-import { Component, HostListener, OnInit, AfterContentChecked, ViewChild } from '@angular/core';
-import { NavbarService } from './shared/components/navbar/navbar.service';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -10,13 +9,6 @@ export class AppComponent implements OnInit {
     // GENERAL STUFF
     public isMobileView = false;
     public mainLogo = './assets/logo-compact.png';
-    private timeoutNavbar: any;
-
-    @ViewChild('navbar') navbar: any;
-
-    constructor(
-        private navbarService: NavbarService
-    ){ }
 
     public ngOnInit(): void {
         this.manageDimensions();
@@ -25,16 +17,5 @@ export class AppComponent implements OnInit {
     @HostListener("window:resize", ["$event"])
     manageDimensions() {
         (window.innerWidth <= 991) ? this.isMobileView = true : this.isMobileView = false;
-
-        if(!!this.navbar) {
-            this.navbarService.setIsMobileView(this.isMobileView);
-        } else {
-            this.timeoutNavbar = setTimeout(() => {
-                if(!!this.navbar) {
-                    clearTimeout(this.timeoutNavbar);
-                    this.navbarService.setIsMobileView(this.isMobileView);
-                }
-            }, 50);
-        }
     }
 }

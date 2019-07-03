@@ -1,0 +1,28 @@
+<ng-container *ngIf="!isMobileView">
+    <div class="container-web">
+        <img alt="Builds" title="Builds" [src]="pathImageBuilds" class="dImage margin-right">
+        <img alt="Builds" title="Builds" [src]="pathImagePotions" class="dImage margin-right">
+        <img alt="Builds" title="Builds" [src]="pathImageNewToRaids" class="dImage margin-right">
+        <img alt="Builds" title="Builds" [src]="pathImageSocial" class="dImage" (click)="navigateTo(true, socialUrl)">
+    </div>
+    <div class="container-web-about" [ngStyle]="{'background-image': 'url(' + containerAboutBg + ')'}">
+        <span class="section-title">
+            About the guild
+        </span>
+        <div class="section-details">
+            <strong>Snow Crows</strong> is a community of hardcore PvE players who
+            strive to be at the top in terms of raids, fractals and dungeons.
+            Outside of weekly raiding and daily fractals, record attempts are likely 
+            to take place for the most engaged players. Additionally, we provide builds,
+            guides & benchmarks for the community to use.
+        </div>
+        <div class="video-section">
+            <iframe class="margin-right" width="450" height="275" frameborder="0" title="Youtube video" src="https://www.youtube.com/embed/ceNRz6lT5Rg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="spacer-medium"></div>
+            <iframe width="450" height="275" title="Youtube video" frameborder="0" src="https://www.youtube.com/embed/7yMpcGLPZ2M" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="isMobileView">
+    Todo :c
+</ng-container>

@@ -2,7 +2,7 @@
   width: 100%;
   height: 56px;
   background-color: #333333;
-  color: white;
+  color: rgb(230, 230, 230);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,6 @@
   background-color: black;
   background: url('bg-home.jpg');
   background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  // background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }

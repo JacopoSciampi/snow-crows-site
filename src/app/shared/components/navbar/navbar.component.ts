@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { NavbarService } from './navbar.service';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 import { iMenu } from 'src/app/helper/interfaces/navbar/iMenu';
 import { iDropdownItem } from '../../../helper/interfaces/navbar/iDropdownItem';
@@ -14,9 +12,9 @@ import { NavbarMenuConfiguration, NavbarDropdownItemClassGuides, NavbarDropdownI
     styleUrls: ['./navbar.component.scss'],
     animations: navbarAnimation
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnChanges{
     // GENERAL STUFF
-    isMobileView = false;
+    @Input() isMobileView;
 
     // CONFIGS
     public menuList: iMenu[] = NavbarMenuConfiguration;
@@ -45,29 +43,34 @@ export class NavbarComponent implements OnInit{
     public dropdownType: number;
     // END DROPDOWN STUFF
 
-    constructor(
-        private navbarService: NavbarService
-    ){
-        this.navbarService.mobileViewEvent
-        .subscribe(isMobileView => {
-            this.isMobileView = isMobileView;
-            this.resetDropdownNavbarStuff();
-        });
-     }
-
-    public ngOnInit(): void {
-
+    public ngOnChanges(): void {
+        this.resetDropdownNavbarStuff();
     }
     
-    public navigateTo(whereTo: string, isDropdown: boolean, event: any, dropdownType: number, idx: number, animationIndex: number): void {
+    public navigateTo(url: string, isDropdown: boolean, event: any, dropdownType: number, idx: number, animationIndex: number): void {
         this.setActiveMenuVoice(idx);
 
         if (isDropdown) {
             this.toggleNavbarDropdown(dropdownType, event, animationIndex);
             
         } else {
-            // TODO with ngIf & dynamic components
+            this.setActiveMenuVoice(null);
             this.resetDropdownNavbarStuff();
+            
+            if(!!url && url.indexOf('http') != -1) {
+    
+                window.open(url, '_blank');
+            }
+        }
+    }
+
+    public dropdownNavigateTo(item: iDropdownItem): void {
+        this.setActiveMenuVoice(null);
+        this.resetDropdownNavbarStuff();
+
+        if(!!item.externalUrl) {
+            window.open(item.externalUrl, '_blank');
+            return;
         }
     }
 

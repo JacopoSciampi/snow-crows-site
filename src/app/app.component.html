@@ -2,8 +2,7 @@
   <img class="sc-small-logo" [src]="mainLogo" alt="Snow Crows logo" title="Snow Crows logo">
   Snow Crows
 </div>
-<app-navbar #navbar></app-navbar>
-<div class="content">
-
-</div>
+<app-navbar [isMobileView]="isMobileView"></app-navbar>
+<div class="content"></div>
+<app-home-info [isMobileView]="isMobileView"></app-home-info>
 
