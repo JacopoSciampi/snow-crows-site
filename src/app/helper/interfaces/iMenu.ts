@@ -4,4 +4,5 @@ export interface iMenu {
     dropdownType: number;
     name: string;
     isActive: boolean;
+    animationIndex: number;
 }

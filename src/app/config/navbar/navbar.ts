@@ -1,4 +1,4 @@
-import { iMenu } from "../helper/interfaces/iMenu";
+import { iMenu } from "../../helper/interfaces/iMenu";
 
 export const navbarMenuConfiguration: iMenu[] = [
     {
@@ -6,48 +6,55 @@ export const navbarMenuConfiguration: iMenu[] = [
         hasDropdown: false,
         dropdownType: null,
         name: 'Benchmarks',
-        isActive: false
+        isActive: false,
+        animationIndex: null,
     },
     {
         url: null,
         hasDropdown: true,
         dropdownType: 1,
         name: 'Raid builds',
-        isActive: false
+        isActive: false,
+        animationIndex: 0,
     },
     {
         url: null,
         hasDropdown: true,
         dropdownType: 2,
         name: 'Class guides',
-        isActive: false
+        isActive: false,
+        animationIndex: 1,
     },
     {
         url: null,
         hasDropdown: true,
         dropdownType: 3,
         name: 'Fractals',
-        isActive: false
+        isActive: false,
+        animationIndex: 2,
     },
     {
         url: null,
         hasDropdown: true,
         dropdownType: 4,
         name: 'Community',
-        isActive: false
+        isActive: false,
+        animationIndex: 3,
     },
     {
         url: 'about',
         hasDropdown: false,
         dropdownType: null,
         name: 'About',
-        isActive: false
+        isActive: false,
+        animationIndex: null,
     },
     {
         url: 'recruitment',
         hasDropdown: false,
         dropdownType: null,
         name: 'Recruitment',
-        isActive: false
+        isActive: false,
+        animationIndex: null,
     }
 ];

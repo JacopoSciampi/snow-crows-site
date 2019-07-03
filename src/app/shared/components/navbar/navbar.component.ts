@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { iMenu } from 'src/app/helper/interfaces/iMenu';
-import { navbarMenuConfiguration } from 'src/app/config/navbar';
+import { navbarMenuConfiguration } from 'src/app/config/navbar/navbar';
 import { NavbarService } from './navbar.service';
-import { navbarAnimation } from '../../../config/navbar-animation';
+import { navbarAnimation } from '../../../config/navbar/navbar-animation';
 
 @Component({
     selector: 'app-navbar',
@@ -18,11 +18,22 @@ export class NavbarComponent implements OnInit{
     public menuList: iMenu[] = navbarMenuConfiguration;
 
     // ANIMATION STUFF
-    animationNavbarDropdown: string;
+    animation1: string;
+    animation2: string;
+    animation3: string;
+    animation4: string;
 
     // START DROPDOWN STUFF
-    public dropdownNavbarOffsetLeft: number;
-    public showDropdown = false;
+    public showDropdown1 = false;
+    public showDropdown2 = false;
+    public showDropdown3 = false;
+    public showDropdown4 = false;
+
+    public dropdownNavbarOffsetLeft1 = - 200;
+    public dropdownNavbarOffsetLeft2 = - 200;
+    public dropdownNavbarOffsetLeft3 = - 200;
+    public dropdownNavbarOffsetLeft4 = - 200;
+
     public dropdownType: number;
     // END DROPDOWN STUFF
 
@@ -36,24 +47,13 @@ export class NavbarComponent implements OnInit{
             this.isMobileview = isMobileView;
         });
     }
-
-    public toggleNavbarDropdown(): void {
-        this.animationNavbarDropdown = this.animationNavbarDropdown == 'out' ? 'in' : 'out';
-    }
     
-    public navigateTo(whereTo: string, isDropdown: boolean, event: any, dropdownType: number, idx: number): void {
+    public navigateTo(whereTo: string, isDropdown: boolean, event: any, dropdownType: number, idx: number, animationIndex: number): void {
         this.setActiveMenuVoice(idx);
-        this.animationNavbarDropdown = 'out';
-        this.showDropdown = false;
 
         if (isDropdown) {
-            this.dropdownNavbarOffsetLeft = event.currentTarget.offsetLeft;
-            this.dropdownType = dropdownType;
-            this.showDropdown = true;
-
-            setTimeout(() => {
-                this.toggleNavbarDropdown();
-            }, 100);
+            this.toggleNavbarDropdown(dropdownType, event, animationIndex);
+            
         } else {
             // TODO with ngIf & dynamic components
             this.resetDropdownNavbarStuff();
@@ -61,10 +61,22 @@ export class NavbarComponent implements OnInit{
     }
 
     private resetDropdownNavbarStuff(): void {
-        this.animationNavbarDropdown = 'out';
-        this.dropdownNavbarOffsetLeft = 0;
-        this.dropdownType = -1;
-        this.showDropdown = false;
+        this.animation1 = 'out';
+        this.animation2 = 'out';
+        this.animation3 = 'out';
+        this.animation4 = 'out';
+
+        this.showDropdown1 = false;
+        this.showDropdown2 = false;
+        this.showDropdown3 = false;
+        this.showDropdown4 = false;
+
+        this.dropdownNavbarOffsetLeft1 = -200;
+        this.dropdownNavbarOffsetLeft2 = -200;
+        this.dropdownNavbarOffsetLeft3 = -200;
+        this.dropdownNavbarOffsetLeft4 = -200;
+
+        this.dropdownType = null;
     }
 
     private setActiveMenuVoice(index: number): void {
@@ -73,4 +85,73 @@ export class NavbarComponent implements OnInit{
         });
     }
 
+    private toggleNavbarDropdown(dropdownType: number, event: any, animationIndex: number): void {
+        this.dropdownType = dropdownType;
+
+        if(animationIndex === 0) {
+            this.animation1 = (this.animation1 === 'out' || typeof(this.animation1) !== 'string')? 'in' : 'out';
+            this.animation2 = 'out';
+            this.animation3 = 'out';
+            this.animation4 = 'out';
+
+            this.showDropdown1 = true;
+            this.showDropdown2 = false;
+            this.showDropdown3 = false;
+            this.showDropdown4 = false;
+
+            this.dropdownNavbarOffsetLeft1 = event.currentTarget.offsetLeft;
+
+            if(this.animation1 === 'out') {
+                this.setActiveMenuVoice(null);
+            }
+        } else if(animationIndex === 1) {
+            this.animation1 = 'out';
+            this.animation2 = (this.animation2 === 'out' || typeof(this.animation2) !== 'string')? 'in' : 'out'
+            this.animation3 = 'out';
+            this.animation4 = 'out';
+
+            this.showDropdown1 = false;
+            this.showDropdown2 = true;
+            this.showDropdown3 = false;
+            this.showDropdown4 = false;
+
+            this.dropdownNavbarOffsetLeft2 = event.currentTarget.offsetLeft;
+
+            if(this.animation2 === 'out') {
+                this.setActiveMenuVoice(null);
+            }
+        } else if(animationIndex === 2) {
+            this.animation1 = 'out';
+            this.animation2 = 'out';
+            this.animation3 = (this.animation3 === 'out' || typeof(this.animation3) !== 'string')? 'in' : 'out'
+            this.animation4 = 'out';
+
+            this.showDropdown1 = false;
+            this.showDropdown2 = false;
+            this.showDropdown3 = true;
+            this.showDropdown4 = false;
+
+            this.dropdownNavbarOffsetLeft3 = event.currentTarget.offsetLeft;
+
+            if(this.animation3 === 'out') {
+                this.setActiveMenuVoice(null);
+            }
+        } else if(animationIndex ===3) {
+            this.animation1 = 'out';
+            this.animation2 = 'out';
+            this.animation3 = 'out'
+            this.animation4 = (this.animation4 === 'out' || typeof(this.animation4) !== 'string')? 'in' : 'out'
+
+            this.showDropdown1 = false;
+            this.showDropdown2 = false;
+            this.showDropdown3 = false;
+            this.showDropdown4 = true;
+
+            this.dropdownNavbarOffsetLeft4 = event.currentTarget.offsetLeft;
+
+            if(this.animation4 === 'out') {
+                this.setActiveMenuVoice(null);
+            }
+        }
+    }
 }
