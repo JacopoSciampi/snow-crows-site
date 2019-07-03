@@ -16,7 +16,7 @@ import { NavbarDropdownItemRaidBuilds } from '../../../config/navbar/navbar';
 })
 export class NavbarComponent implements OnInit{
     // GENERAL STUFF
-    isMobileview = false;
+    isMobileView = false;
 
     // CONFIGS
     public menuList: iMenu[] = NavbarMenuConfiguration;
@@ -44,14 +44,16 @@ export class NavbarComponent implements OnInit{
 
     constructor(
         private navbarService: NavbarService
-    ){ }
-
-    public ngOnInit(): void {
+    ){
         this.navbarService.mobileViewEvent
         .subscribe(isMobileView => {
-            this.isMobileview = isMobileView;
+            this.isMobileView = isMobileView;
             this.resetDropdownNavbarStuff();
         });
+     }
+
+    public ngOnInit(): void {
+
     }
     
     public navigateTo(whereTo: string, isDropdown: boolean, event: any, dropdownType: number, idx: number, animationIndex: number): void {
