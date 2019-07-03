@@ -2,51 +2,7 @@
   <img class="sc-small-logo" src="../assets/logo-compact.png" alt="Snow Crows logo">
   Snow Crows
 </div>
-<div class="navbar">
-  <ng-container *ngIf="isMobileview">
-    Todo :c
-  </ng-container>
-  <ng-container *ngIf="!isMobileview">
-    <div class="single-item" (click)="navigateTo('benchmarks', false, null, null)">
-      Benchmarks
-    </div>
-    <div class="single-item" (click)="navigateTo('benchmarks', true, $event, 1)">
-      Raid builds
-      <i class="material-icons">arrow_drop_down</i>
-    </div>
-    <div class="single-item" (click)="navigateTo('benchmarks', true, $event, 2)">
-      Class guides
-      <i class="material-icons">arrow_drop_down</i>
-    </div>
-    <div class="single-item" (click)="navigateTo('benchmarks', true, $event, 3)">
-      Fractals
-      <i class="material-icons">arrow_drop_down</i>
-    </div>
-    <div class="single-item" (click)="navigateTo('benchmarks', true, $event, 4)">
-      Community
-      <i class="material-icons">arrow_drop_down</i>
-    </div>
-    <div class="single-item" (click)="navigateTo('benchmarks', false, null, null)">
-      About
-    </div>
-    <div class="single-item" (click)="navigateTo('benchmarks', false, null, null)">
-      Recruitment
-    </div>
-  </ng-container>
-</div>
-
-<!-- 
-    START STUFF FOR DYNAMIC DOPDOWN
--->
-
-<!-- Add animation to this shit of height from 0 to hero (Fixed height from 0 to *) -->
-<div class="dropdown" *ngIf="showDropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft}">
-  Ciao mamma
-</div>
-
-<!--
-    END STUFF FOR DYNAMIC DROPDOWN
--->
+<app-navbar></app-navbar>
 <div class="content">
 
 </div>
