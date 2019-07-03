@@ -43,7 +43,7 @@
 
 .dropdown {
   position: absolute;
-  width: 150px;
+  width: 200px;
   height: auto;
   box-sizing: border-box;
   background-color: #101010e6;
@@ -64,10 +64,16 @@
 
     &:hover{
       padding: 0px 15px;
+      color: white;
+      background-color: rgba(0,0,0,0.50);
     }
   }
 
   .icon-item {
     margin-right: 8px;
+  }
+
+  .single-item-border-bottom {
+    border-bottom: 1px solid #444444;
   }
 }

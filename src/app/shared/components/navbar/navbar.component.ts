@@ -5,8 +5,8 @@ import { NavbarService } from './navbar.service';
 import { iMenu } from 'src/app/helper/interfaces/navbar/iMenu';
 import { iDropdownItem } from '../../../helper/interfaces/navbar/iDropdownItem';
 import { navbarAnimation } from '../../../config/navbar/navbar-animation';
-import { NavbarMenuConfiguration } from 'src/app/config/navbar/navbar';
-import { NavbarDropdownItemRaidBuilds } from '../../../config/navbar/navbar';
+import { NavbarDropdownItemRaidBuilds, NavbarDropdownItemCommunity } from '../../../config/navbar/navbar';
+import { NavbarMenuConfiguration, NavbarDropdownItemClassGuides, NavbarDropdownItemFractals } from 'src/app/config/navbar/navbar';
 
 @Component({
     selector: 'app-navbar',
@@ -21,6 +21,9 @@ export class NavbarComponent implements OnInit{
     // CONFIGS
     public menuList: iMenu[] = NavbarMenuConfiguration;
     public raidBuildDropwon: iDropdownItem[] = NavbarDropdownItemRaidBuilds;
+    public classGuidesDropdown:iDropdownItem[] = NavbarDropdownItemClassGuides;
+    public fractalsDropdown: iDropdownItem[] = NavbarDropdownItemFractals;
+    public communityDropdown: iDropdownItem[] = NavbarDropdownItemCommunity;
 
     // ANIMATION STUFF
     animation1: string;

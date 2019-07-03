@@ -11,13 +11,13 @@ export const navbarAnimation = [
       state('in', style({
         overflow: 'hidden',
         height: '*',
-        width: '150px'
+        width: '200px'
       })),
       state('out', style({
         opacity: '0',
         overflow: 'hidden',
         height: '0px',
-        width: '150px'
+        width: '200px'
       })),
       transition('in => out', animate('400ms ease-in-out')),
       transition('out => in', animate('400ms ease-in-out'))
@@ -26,13 +26,13 @@ export const navbarAnimation = [
       state('in', style({
         overflow: 'hidden',
         height: '*',
-        width: '150px'
+        width: '200px'
       })),
       state('out', style({
         opacity: '0',
         overflow: 'hidden',
         height: '0px',
-        width: '150px'
+        width: '200px'
       })),
       transition('in => out', animate('400ms ease-in-out')),
       transition('out => in', animate('400ms ease-in-out'))
@@ -41,13 +41,13 @@ export const navbarAnimation = [
       state('in', style({
         overflow: 'hidden',
         height: '*',
-        width: '150px'
+        width: '200px'
       })),
       state('out', style({
         opacity: '0',
         overflow: 'hidden',
         height: '0px',
-        width: '150px'
+        width: '200px'
       })),
       transition('in => out', animate('400ms ease-in-out')),
       transition('out => in', animate('400ms ease-in-out'))
@@ -56,13 +56,13 @@ export const navbarAnimation = [
       state('in', style({
         overflow: 'hidden',
         height: '*',
-        width: '150px'
+        width: '200px'
       })),
       state('out', style({
         opacity: '0',
         overflow: 'hidden',
         height: '0px',
-        width: '150px'
+        width: '200px'
       })),
       transition('in => out', animate('400ms ease-in-out')),
       transition('out => in', animate('400ms ease-in-out'))
