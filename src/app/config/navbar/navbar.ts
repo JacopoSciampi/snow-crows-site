@@ -1,6 +1,7 @@
-import { iMenu } from "../../helper/interfaces/iMenu";
+import { iMenu } from "../../helper/interfaces/navbar/iMenu";
+import { iDropdownItem } from 'src/app/helper/interfaces/navbar/iDropdownItem';
 
-export const navbarMenuConfiguration: iMenu[] = [
+export const NavbarMenuConfiguration: iMenu[] = [
     {
         url: 'benchmarks',
         hasDropdown: false,
@@ -58,3 +59,43 @@ export const navbarMenuConfiguration: iMenu[] = [
         animationIndex: null,
     }
 ];
+
+export const NavbarDropdownItemRaidBuilds: iDropdownItem[] = [
+    {
+        name: 'Elementalist',
+        iconUrl: './assets/icons/elementalist-flat.png',
+
+    },
+    {
+        name: 'Mesmer',
+        iconUrl: './assets/icons/mesmer-flat.png',
+    },
+    {
+        name: 'Necromancer',
+        iconUrl: './assets/icons/necromancer-flat.png',
+    },
+    {
+        name: 'Engineer',
+        iconUrl: './assets/icons/engineer-flat.png',
+    },
+    {
+        name: 'Ranger',
+        iconUrl: './assets/icons/ranger-flat.png',
+    },
+    {
+        name: 'Thief',
+        iconUrl: './assets/icons/thief-flat.png',
+    },
+    {
+        name: 'Guardian',
+        iconUrl: './assets/icons/guardian-flat.png',
+    },
+    {
+        name: 'Revenant',
+        iconUrl: './assets/icons/revenant-flat.png',
+    },
+    {
+        name: 'Warrior',
+        iconUrl: './assets/icons/warrior-flat.png',
+    }
+]

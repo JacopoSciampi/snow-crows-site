@@ -15,21 +15,29 @@
   </ng-container>
 </div>
 
+<ng-container *ngIf="!isMobileview">
 <!-- 
     START STUFF FOR DYNAMIC DOPDOWN
 -->
-<div class="dropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft1}" [@sio1]="animation1">
-  Ciao mamma1
-</div>
-<div class="dropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft2}" [@sio2]="animation2">
-  Ciao mamma2
-</div>
-<div class="dropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft3}" [@sio3]="animation3">
-  Ciao mamma3
-</div>
-<div class="dropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft4}" [@sio4]="animation4">
-  Ciao mamma4
-</div>
+  <div class="dropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft1}" [@sio1]="animation1">
+  <ng-container *ngFor="let item of raidBuildDropwon">
+    <div class="single-item-dropdown">
+      <img class="icon-item" [src]="item.iconUrl" [alt]="item.name" [title]="item.name">
+      {{item.name}} 
+    </div>
+  </ng-container>
+  
+  </div>
+  <div class="dropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft2}" [@sio2]="animation2">
+    Ciao mamma2
+  </div>
+  <div class="dropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft3}" [@sio3]="animation3">
+    Ciao mamma3
+  </div>
+  <div class="dropdown" [ngStyle]="{'left.px': dropdownNavbarOffsetLeft4}" [@sio4]="animation4">
+    Ciao mamma4
+  </div>
 <!--
     END STUFF FOR DYNAMIC DROPDOWN
 -->
+</ng-container>

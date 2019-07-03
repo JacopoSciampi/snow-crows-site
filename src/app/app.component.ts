@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { iMenu } from './helper/interfaces/iMenu';
+import { iMenu } from './helper/interfaces/navbar/iMenu';
 import { navbarMenuConfiguration } from './config/navbar/navbar';
 import { NavbarService } from './shared/components/navbar/navbar.service';
 

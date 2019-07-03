@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { iMenu } from 'src/app/helper/interfaces/iMenu';
-import { navbarMenuConfiguration } from 'src/app/config/navbar/navbar';
+
 import { NavbarService } from './navbar.service';
+
+import { iMenu } from 'src/app/helper/interfaces/navbar/iMenu';
+import { iDropdownItem } from '../../../helper/interfaces/navbar/iDropdownItem';
 import { navbarAnimation } from '../../../config/navbar/navbar-animation';
+import { NavbarMenuConfiguration } from 'src/app/config/navbar/navbar';
+import { NavbarDropdownItemRaidBuilds } from '../../../config/navbar/navbar';
 
 @Component({
     selector: 'app-navbar',
@@ -15,7 +19,8 @@ export class NavbarComponent implements OnInit{
     isMobileview = false;
 
     // CONFIGS
-    public menuList: iMenu[] = navbarMenuConfiguration;
+    public menuList: iMenu[] = NavbarMenuConfiguration;
+    public raidBuildDropwon: iDropdownItem[] = NavbarDropdownItemRaidBuilds;
 
     // ANIMATION STUFF
     animation1: string;
@@ -45,6 +50,7 @@ export class NavbarComponent implements OnInit{
         this.navbarService.mobileViewEvent
         .subscribe(isMobileView => {
             this.isMobileview = isMobileView;
+            this.resetDropdownNavbarStuff();
         });
     }
     
