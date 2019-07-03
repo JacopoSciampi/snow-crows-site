@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
 
     public ngOnInit(): void {
         this.manageDimensions();
+
+        console.log("Yeet");
     }
 
     @HostListener("window:resize", ["$event"])

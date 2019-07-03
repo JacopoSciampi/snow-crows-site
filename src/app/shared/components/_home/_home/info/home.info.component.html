@@ -1,9 +1,9 @@
 <ng-container *ngIf="!isMobileView">
     <div class="container-web">
         <img alt="Builds" title="Builds" [src]="pathImageBuilds" class="dImage margin-right">
-        <img alt="Builds" title="Builds" [src]="pathImagePotions" class="dImage margin-right">
-        <img alt="Builds" title="Builds" [src]="pathImageNewToRaids" class="dImage margin-right">
-        <img alt="Builds" title="Builds" [src]="pathImageSocial" class="dImage" (click)="navigateTo(true, socialUrl)">
+        <img alt="Potions" title="Potions" [src]="pathImagePotions" class="dImage margin-right">
+        <img alt="New to Raids" title="New to Raids" [src]="pathImageNewToRaids" class="dImage margin-right">
+        <img alt="Social" title="Social" [src]="pathImageSocial" class="dImage" (click)="navigateTo(true, socialUrl)">
     </div>
     <div class="container-web-about" [ngStyle]="{'background-image': 'url(' + containerAboutBg + ')'}">
         <span class="section-title">

@@ -10,8 +10,8 @@ export class HomeInfoComponent {
     @Input() isMobileView;
 
     public pathImageBuilds = "./assets/home/builds.png";
-    public pathImagePotions = "./assets/home/new-to-raids.png";
-    public pathImageNewToRaids = "./assets/home/potions.png";
+    public pathImagePotions = "./assets/home/potions.png";
+    public pathImageNewToRaids = "./assets/home/new-to-raids.png";
     public pathImageSocial = "./assets/home/social.png";
 
     public containerAboutBg = "./assets/bg-about.png";
