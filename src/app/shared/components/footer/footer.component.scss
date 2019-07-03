@@ -1,17 +1,37 @@
 .footer-web {
   width: 100%;
   background-color: #2d2d2d;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  height: 200px;
+  text-align: center;
   font-size: 20px;
   user-select: none;
   font-family: 'sc-font-elegant', Arial, Helvetica, sans-serif;
   font-size: .73rem;
   box-sizing: border-box;
+  color: white;
 }
 
 .cards {
-  margin-top: 15px;
+  padding-top: 15px;
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-list {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .card {
+    margin-right: 10px;
+    width: 110px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+
 }
