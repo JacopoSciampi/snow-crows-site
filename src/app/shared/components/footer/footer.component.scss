@@ -74,6 +74,24 @@
   border-radius: 8px;
   color: #cecece;
   user-select: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.modal-4 {
+  position: absolute;
+  width: 180px;
+  height: 202px;
+  box-sizing: border-box;
+  background-color: #3b4046;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: #cecece;
+  user-select: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .modal-image {
@@ -82,7 +100,6 @@
   height: 60px;
   box-sizing: border-box;
   padding-top: 10px;
-  background-color: #1f2124;
 }
 
 .modal-rounded-image {
@@ -95,7 +112,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1f2124;
   width: 100%;
   height: 30px;
   font-size: 16px;
@@ -117,6 +133,11 @@
     flex-direction: row;
     align-items: center;
     box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      padding-left: 5px;
+    }
 
     .small-icon {
       width:  20px;

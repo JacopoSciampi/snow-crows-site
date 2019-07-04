@@ -19,6 +19,11 @@ export class FooterComponent {
     public photoDiscord = "./assets/icons/discord.png";
     public photoYoutube = "./assets/icons/youtube.png";
     public photoUser    = "./assets/icons/user.png";
+    public photoTwitch  = "./assets/icons/twitch.png";
+
+    public blurUrl1 = "./assets/home/members/axiasBlur.png";
+    public blurUrl2 = "./assets/home/members/targetBlur.png";
+    public blurUrl3 = "./assets/home/members/yuiBlur.png";
 
     // ANIMATION STUFF
     public animation1: string;
@@ -45,13 +50,22 @@ export class FooterComponent {
     public modalOffsetTop6 = - 200;
     public modalOffsetTop7 = - 200;
 
+    private CheckIfCloseCardByType(type: number): boolean {
+        let toReturn = false;
+        if(this.lastClickType == type) {
+            this.resetCards();
+            this.lastClickType = null;
+            toReturn = true;
+        }
+
+        return toReturn;
+    }
+
     public openCardDetail(type: number, event: any): void {
         this.resetCards();
 
         if(type === 0) {
-            if(this.lastClickType == type) {
-                this.resetCards();
-                this.lastClickType = null;
+            if(this.CheckIfCloseCardByType(type)) {
                 return;
             }
 
@@ -66,6 +80,10 @@ export class FooterComponent {
             this.modalOffsetLeft1 = event.currentTarget.offsetLeft - 30;
             this.modalOffsetTop1 = event.currentTarget.offsetTop - 187;
         } else if(type === 1) {
+            if(this.CheckIfCloseCardByType(type)) {
+                return;
+            }
+
             this.animation1 = 'out'
             this.animation2 = (this.animation2 === 'out' || typeof(this.animation2) !== 'string')? 'in' : 'out';
             this.animation3 = 'out';
@@ -76,6 +94,21 @@ export class FooterComponent {
 
             this.modalOffsetLeft2 = event.currentTarget.offsetLeft - 30;
             this.modalOffsetTop2 = event.currentTarget.offsetTop - 187;
+        } else if(type === 2) {
+            if(this.CheckIfCloseCardByType(type)) {
+                return;
+            }
+
+            this.animation1 = 'out'
+            this.animation2 = 'out'
+            this.animation3 = (this.animation3 === 'out' || typeof(this.animation3) !== 'string')? 'in' : 'out';
+            this.animation4 = 'out';
+            this.animation5 = 'out';
+            this.animation6 = 'out';
+            this.animation7 = 'out';
+
+            this.modalOffsetLeft3 = event.currentTarget.offsetLeft - 30;
+            this.modalOffsetTop3 = event.currentTarget.offsetTop - 212;
         }
 
         this.lastClickType = type;

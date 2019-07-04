@@ -45,7 +45,7 @@
   <!--
     START DINAMIC CONTENT
   -->
-  <div class="modal-3" [ngStyle]="{'left.px': modalOffsetLeft1, 'top.px': modalOffsetTop1}" [@sio1]="animation1">
+  <div class="modal-3" [ngStyle]="{'left.px': modalOffsetLeft1, 'top.px': modalOffsetTop1, 'background-image': 'url(' + blurUrl1 + ')'}" [@sio1]="animation1">
     <div class="modal-image">
       <img alt="Axias" title="Axias" [src]="photoUrl1" class="modal-rounded-image">
     </div>
@@ -79,9 +79,82 @@
       </div>
     </div>
   </div>
-  <div class="modal-3" [ngStyle]="{'left.px': modalOffsetLeft2, 'top.px': modalOffsetTop2}" [@sio2]="animation2">
-      todo :c
+  <div class="modal-3" [ngStyle]="{'left.px': modalOffsetLeft2, 'top.px': modalOffsetTop2, 'background-image': 'url(' + blurUrl2 + ')'}" [@sio2]="animation2">
+    <div class="modal-image">
+      <img alt="Target" title="Target" [src]="photoUrl2" class="modal-rounded-image">
     </div>
+    <div class="modal-title-name">
+        Target
+    </div>
+    <div class="modal-links">
+      <div class="single-link">
+        <div class="small-icon">
+          <img alt="User" title="User" [src]="photoUser" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Target.6379
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+          <img alt="Youtube" title="Youtube" [src]="photoYoutube" class="small-icon">
+        </div>
+        <div class="desc">
+          <span class="link" (click)="openLink('https://www.youtube.com/channel/UCe77eVwJChtMyj7Cif6i3NQ')">Target SC</span>
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+          <img alt="Discord" title="Discord" [src]="photoDiscord" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Target#6729
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-4" [ngStyle]="{'left.px': modalOffsetLeft3, 'top.px': modalOffsetTop3, 'background-image': 'url(' + blurUrl3 + ')'}" [@sio3]="animation3">
+    <div class="modal-image">
+      <img alt="Yui" title="Yui" [src]="photoUrl3" class="modal-rounded-image">
+    </div>
+    <div class="modal-title-name">
+        Yui
+    </div>
+    <div class="modal-links">
+      <div class="single-link">
+        <div class="small-icon">
+          <img alt="User" title="User" [src]="photoUser" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          BlackDragon.3752
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+          <img alt="Youtube" title="Youtube" [src]="photoYoutube" class="small-icon">
+        </div>
+        <div class="desc">
+          <span class="link" (click)="openLink('https://www.youtube.com/channel/UCkL5cQMAI2qXa9kyMyGmGhA')">Kirasia</span>
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+          <img alt="Discord" title="Discord" [src]="photoDiscord" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Yui#2228
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+          <img alt="Twitch" title="Twitch" [src]="photoTwitch" class="small-icon">
+        </div>
+        <div class="desc selectable">
+            <span class="link" (click)="openLink('https://www.twitch.tv/kirasia')">Kirasia</span>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--
     END DINAMIC CONTENT
   -->

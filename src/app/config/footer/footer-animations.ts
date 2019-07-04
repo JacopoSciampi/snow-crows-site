@@ -40,7 +40,7 @@ export const footerAnimations = [
     trigger('sio3', [
       state('in', style({
         overflow: 'hidden',
-        height: '177px',
+        height: '202px',
         width: '180px'
       })),
       state('out', style({
