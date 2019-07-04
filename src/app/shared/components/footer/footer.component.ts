@@ -15,6 +15,10 @@ export class FooterComponent {
     public photoUrl1 = "./assets/home/members/axias.png";
     public photoUrl2 = "./assets/home/members/target.png";
     public photoUrl3 = "./assets/home/members/yui.png";
+    public photoUrl4 = "./assets/home/members/derpy.png";
+    public photoUrl5 = "./assets/home/members/fallen.png";
+    public photoUrl6 = "./assets/home/members/kiwi.png";
+    public photoUrl7 = "./assets/home/members/muju.png";
 
     public photoDiscord = "./assets/icons/discord.png";
     public photoYoutube = "./assets/icons/youtube.png";
@@ -24,6 +28,10 @@ export class FooterComponent {
     public blurUrl1 = "./assets/home/members/axiasBlur.png";
     public blurUrl2 = "./assets/home/members/targetBlur.png";
     public blurUrl3 = "./assets/home/members/yuiBlur.png";
+    public blurUrl4 = "./assets/home/members/derpyBlur.png";
+    public blurUrl5 = "./assets/home/members/fallenBlur.png";
+    public blurUrl6 = "./assets/home/members/kiwiBlur.png";
+    public blurUrl7 = "./assets/home/members/mujuBlur.png";
 
     // ANIMATION STUFF
     public animation1: string;
@@ -84,7 +92,7 @@ export class FooterComponent {
                 return;
             }
 
-            this.animation1 = 'out'
+            this.animation1 = 'out';
             this.animation2 = (this.animation2 === 'out' || typeof(this.animation2) !== 'string')? 'in' : 'out';
             this.animation3 = 'out';
             this.animation4 = 'out';
@@ -99,8 +107,8 @@ export class FooterComponent {
                 return;
             }
 
-            this.animation1 = 'out'
-            this.animation2 = 'out'
+            this.animation1 = 'out';
+            this.animation2 = 'out';
             this.animation3 = (this.animation3 === 'out' || typeof(this.animation3) !== 'string')? 'in' : 'out';
             this.animation4 = 'out';
             this.animation5 = 'out';
@@ -109,6 +117,66 @@ export class FooterComponent {
 
             this.modalOffsetLeft3 = event.currentTarget.offsetLeft - 30;
             this.modalOffsetTop3 = event.currentTarget.offsetTop - 212;
+        } else if(type === 3) {
+            if(this.CheckIfCloseCardByType(type)) {
+                return;
+            }
+
+            this.animation1 = 'out';
+            this.animation2 = 'out';
+            this.animation3 = 'out';
+            this.animation4 = (this.animation4 === 'out' || typeof(this.animation4) !== 'string')? 'in' : 'out';
+            this.animation5 = 'out';
+            this.animation6 = 'out';
+            this.animation7 = 'out';
+
+            this.modalOffsetLeft4 = event.currentTarget.offsetLeft - 30;
+            this.modalOffsetTop4 = event.currentTarget.offsetTop - 212;
+        } else if(type === 4) {
+            if(this.CheckIfCloseCardByType(type)) {
+                return;
+            }
+
+            this.animation1 = 'out';
+            this.animation2 = 'out';
+            this.animation3 = 'out';
+            this.animation4 = 'out';
+            this.animation5 = (this.animation5 === 'out' || typeof(this.animation5) !== 'string')? 'in' : 'out';
+            this.animation6 = 'out';
+            this.animation7 = 'out';
+
+            this.modalOffsetLeft5 = event.currentTarget.offsetLeft - 30;
+            this.modalOffsetTop5 = event.currentTarget.offsetTop - 187;
+        } else if(type === 5) {
+            if(this.CheckIfCloseCardByType(type)) {
+                return;
+            }
+
+            this.animation1 = 'out';
+            this.animation2 = 'out';
+            this.animation3 = 'out';
+            this.animation4 = 'out';
+            this.animation5 = 'out';
+            this.animation6 = (this.animation6 === 'out' || typeof(this.animation6) !== 'string')? 'in' : 'out';
+            this.animation7 = 'out';
+
+            this.modalOffsetLeft6 = event.currentTarget.offsetLeft - 30;
+            this.modalOffsetTop6 = event.currentTarget.offsetTop - 162;
+        } else if(type === 6) {
+            if(this.CheckIfCloseCardByType(type)) {
+                return;
+            }
+
+            this.animation1 = 'out';
+            this.animation2 = 'out';
+            this.animation3 = 'out';
+            this.animation4 = 'out';
+            this.animation5 = 'out';
+            this.animation6 = 'out';
+            this.animation7 = (this.animation7 === 'out' || typeof(this.animation7) !== 'string')? 'in' : 'out';
+
+            this.modalOffsetLeft7 = event.currentTarget.offsetLeft - 30;
+            this.modalOffsetTop7 = event.currentTarget.offsetTop - 162;
         }
 
         this.lastClickType = type;

@@ -55,7 +55,7 @@ export const footerAnimations = [
     trigger('sio4', [
       state('in', style({
         overflow: 'hidden',
-        height: '177px',
+        height: '202px',
         width: '180px'
       })),
       state('out', style({
@@ -85,7 +85,7 @@ export const footerAnimations = [
     trigger('sio6', [
       state('in', style({
         overflow: 'hidden',
-        height: '177px',
+        height: '152px',
         width: '180px'
       })),
       state('out', style({
@@ -100,7 +100,7 @@ export const footerAnimations = [
     trigger('sio7', [
       state('in', style({
         overflow: 'hidden',
-        height: '177px',
+        height: '152px',
         width: '180px'
       })),
       state('out', style({

@@ -39,7 +39,40 @@
       <div class="card-title">
         Officiers
       </div>
-      Cards here 2
+      <div class="card-list">
+        <div class="card" (click)="openCardDetail(3, $event)">
+          <div class="rounded-icon">
+            <img class="rounded-img" alt="Derpy" title="Derpy" [src]="photoUrl4">
+          </div>
+          <div class="card-name">
+            Derpy
+          </div>
+        </div>
+        <div class="card" (click)="openCardDetail(4, $event)">
+          <div class="rounded-icon">
+            <img class="rounded-img" alt="Fallen" title="Fallen" [src]="photoUrl4">
+          </div>
+          <div class="card-name">
+            Fallen
+          </div>
+        </div>
+        <div class="card" (click)="openCardDetail(5, $event)">
+          <div class="rounded-icon">
+            <img class="rounded-img" alt="Kiwi" title="Kiwi" [src]="photoUrl5">
+          </div>
+          <div class="card-name">
+            Kiwi
+          </div>
+        </div>
+        <div class="card" (click)="openCardDetail(6, $event)">
+          <div class="rounded-icon">
+            <img class="rounded-img" alt="Muju" title="Muju" [src]="photoUrl6">
+          </div>
+          <div class="card-name">
+            Muju
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!--
@@ -151,6 +184,134 @@
         </div>
         <div class="desc selectable">
             <span class="link" (click)="openLink('https://www.twitch.tv/kirasia')">Kirasia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-4" [ngStyle]="{'left.px': modalOffsetLeft4, 'top.px': modalOffsetTop4, 'background-image': 'url(' + blurUrl4 + ')'}" [@sio4]="animation4">
+    <div class="modal-image">
+      <img alt="Derpy" title="Derpy" [src]="photoUrl4" class="modal-rounded-image">
+    </div>
+    <div class="modal-title-name">
+        Derpy
+    </div>
+    <div class="modal-links">
+      <div class="single-link">
+        <div class="small-icon">
+          <img alt="User" title="User" [src]="photoUser" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Amicable Pugs.4503
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Youtube" title="Youtube" [src]="photoYoutube" class="small-icon">
+        </div>
+        <div class="desc">
+          <span class="link" (click)="openLink('https://www.youtube.com/c/DerpyMoa')">DerpyMoa</span>
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Discord" title="Discord" [src]="photoDiscord" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Derpy Moa#2952
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+          <img alt="Twitch" title="Twitch" [src]="photoTwitch" class="small-icon">
+        </div>
+        <div class="desc selectable">
+            <span class="link" (click)="openLink('https://www.twitch.tv/derpy_moa')">derpy_moa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-3" [ngStyle]="{'left.px': modalOffsetLeft5, 'top.px': modalOffsetTop5, 'background-image': 'url(' + blurUrl5 + ')'}" [@sio5]="animation5">
+    <div class="modal-image">
+      <img alt="Fallen" title="Fallen" [src]="photoUrl5" class="modal-rounded-image">
+    </div>
+    <div class="modal-title-name">
+      Fallen
+    </div>
+    <div class="modal-links">
+      <div class="single-link">
+        <div class="small-icon">
+            <img alt="User" title="User" [src]="photoUser" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Blood Prince.7420
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Youtube" title="Youtube" [src]="photoYoutube" class="small-icon">
+        </div>
+        <div class="desc">
+          <span class="link" (click)="openLink('https://www.youtube.com/channel/UCmrnQs0M60R_tOehC9W43rQ')">Fallen</span>
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Discord" title="Discord" [src]="photoDiscord" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Fallen#3222
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-2" [ngStyle]="{'left.px': modalOffsetLeft6, 'top.px': modalOffsetTop6, 'background-image': 'url(' + blurUrl6 + ')'}" [@sio6]="animation6">
+    <div class="modal-image">
+      <img alt="Kiwi" title="Kiwi" [src]="photoUrl6" class="modal-rounded-image">
+    </div>
+    <div class="modal-title-name">
+      Kiwi
+    </div>
+    <div class="modal-links">
+      <div class="single-link">
+        <div class="small-icon">
+            <img alt="User" title="User" [src]="photoUser" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          kiwi.6348
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Youtube" title="Youtube" [src]="photoYoutube" class="small-icon">
+        </div>
+        <div class="desc">
+          <span class="link" (click)="openLink('https://www.youtube.com/user/Ki1iwi1i/')">Ki1iwi1i</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-2" [ngStyle]="{'left.px': modalOffsetLeft7, 'top.px': modalOffsetTop7, 'background-image': 'url(' + blurUrl7 + ')'}" [@sio7]="animation7">
+    <div class="modal-image">
+      <img alt="Muju" title="Muju" [src]="photoUrl7" class="modal-rounded-image">
+    </div>
+    <div class="modal-title-name">
+      Muju
+    </div>
+    <div class="modal-links">
+      <div class="single-link">
+        <div class="small-icon">
+            <img alt="User" title="User" [src]="photoUser" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Mst.1596
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Youtube" title="Youtube" [src]="photoYoutube" class="small-icon">
+        </div>
+        <div class="desc">
+          <span class="link" (click)="openLink('https://www.youtube.com/c/Mujugw')">Muju</span>
         </div>
       </div>
     </div>

@@ -64,6 +64,21 @@
   }
 }
 
+.modal-2 {
+  position: absolute;
+  width: 180px;
+  height: 152px;
+  box-sizing: border-box;
+  background-color: #3b4046;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: #cecece;
+  user-select: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .modal-3 {
   position: absolute;
   width: 180px;
