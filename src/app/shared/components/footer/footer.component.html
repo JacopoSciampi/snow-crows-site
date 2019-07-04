@@ -8,11 +8,29 @@
         Leaders
       </div>
       <div class="card-list">
-        <div class="card">
-          ciao
+        <div class="card" (click)="openCardDetail(0, $event)">
+          <div class="rounded-icon">
+            <img class="rounded-img" alt="Axias" title="Axias" [src]="photoUrl1">
+          </div>
+          <div class="card-name">
+            Axias
+          </div>
         </div>
-        <div class="card">
-          ciao 2
+        <div class="card" (click)="openCardDetail(1, $event)">
+          <div class="rounded-icon">
+            <img class="rounded-img" alt="Target" title="Target" [src]="photoUrl2">
+          </div>
+          <div class="card-name">
+            Target
+          </div>
+        </div>
+        <div class="card" (click)="openCardDetail(2, $event)">
+          <div class="rounded-icon">
+            <img class="rounded-img" alt="Yui" title="Yui" [src]="photoUrl3">
+          </div>
+          <div class="card-name">
+            Yui
+          </div>
         </div>
       </div>
     </div>
@@ -24,4 +42,47 @@
       Cards here 2
     </div>
   </div>
+  <!--
+    START DINAMIC CONTENT
+  -->
+  <div class="modal-3" [ngStyle]="{'left.px': modalOffsetLeft1, 'top.px': modalOffsetTop1}" [@sio1]="animation1">
+    <div class="modal-image">
+      <img alt="Axias" title="Axias" [src]="photoUrl1" class="modal-rounded-image">
+    </div>
+    <div class="modal-title-name">
+      Axias
+    </div>
+    <div class="modal-links">
+      <div class="single-link">
+        <div class="small-icon">
+            <img alt="User" title="User" [src]="photoUser" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          OrionXnAsh.3064
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Youtube" title="Youtube" [src]="photoYoutube" class="small-icon">
+        </div>
+        <div class="desc">
+          <span class="link" (click)="openLink('https://www.youtube.com/channel/UCFV8QdSe_vVNM0HoTv7GFRg')">Axias SC</span>
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Discord" title="Discord" [src]="photoDiscord" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Axias#6125
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-3" [ngStyle]="{'left.px': modalOffsetLeft2, 'top.px': modalOffsetTop2}" [@sio2]="animation2">
+      todo :c
+    </div>
+  <!--
+    END DINAMIC CONTENT
+  -->
 </ng-container>

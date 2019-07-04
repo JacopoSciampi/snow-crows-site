@@ -5,7 +5,7 @@
   <ng-container *ngIf="!isMobileView">
     <ng-container *ngFor="let item of menuList; let i = index">
       <div class="single-item" [ngClass]="[item.isActive ? 'single-item-active' : 'single-item-not-active']"
-      (click)="navigateTo(item.url, item.hasDropdown, $event, item.dropdownType, i, item.animationIndex)">
+      (click)="navigateTo(item.url, item.hasDropdown, $event, i, item.animationIndex)">
         {{item.name}}
         <ng-container *ngIf="item.hasDropdown">
           <em class="material-icons">arrow_drop_down</em>

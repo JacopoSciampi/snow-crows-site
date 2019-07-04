@@ -29,29 +29,22 @@ export class NavbarComponent implements OnChanges{
     animation3: string;
     animation4: string;
 
-    // START DROPDOWN STUFF
-    public showDropdown1 = false;
-    public showDropdown2 = false;
-    public showDropdown3 = false;
-    public showDropdown4 = false;
-
     public dropdownNavbarOffsetLeft1 = - 200;
     public dropdownNavbarOffsetLeft2 = - 200;
     public dropdownNavbarOffsetLeft3 = - 200;
     public dropdownNavbarOffsetLeft4 = - 200;
 
-    public dropdownType: number;
     // END DROPDOWN STUFF
 
     public ngOnChanges(): void {
         this.resetDropdownNavbarStuff();
     }
     
-    public navigateTo(url: string, isDropdown: boolean, event: any, dropdownType: number, idx: number, animationIndex: number): void {
+    public navigateTo(url: string, isDropdown: boolean, event: any, idx: number, animationIndex: number): void {
         this.setActiveMenuVoice(idx);
 
         if (isDropdown) {
-            this.toggleNavbarDropdown(dropdownType, event, animationIndex);
+            this.toggleNavbarDropdown(event, animationIndex);
             
         } else {
             this.setActiveMenuVoice(null);
@@ -80,17 +73,11 @@ export class NavbarComponent implements OnChanges{
         this.animation3 = 'out';
         this.animation4 = 'out';
 
-        this.showDropdown1 = false;
-        this.showDropdown2 = false;
-        this.showDropdown3 = false;
-        this.showDropdown4 = false;
-
         this.dropdownNavbarOffsetLeft1 = -200;
         this.dropdownNavbarOffsetLeft2 = -200;
         this.dropdownNavbarOffsetLeft3 = -200;
         this.dropdownNavbarOffsetLeft4 = -200;
 
-        this.dropdownType = null;
     }
 
     private setActiveMenuVoice(index: number): void {
@@ -99,19 +86,12 @@ export class NavbarComponent implements OnChanges{
         });
     }
 
-    private toggleNavbarDropdown(dropdownType: number, event: any, animationIndex: number): void {
-        this.dropdownType = dropdownType;
-
+    private toggleNavbarDropdown(event: any, animationIndex: number): void {
         if(animationIndex === 0) {
             this.animation1 = (this.animation1 === 'out' || typeof(this.animation1) !== 'string')? 'in' : 'out';
             this.animation2 = 'out';
             this.animation3 = 'out';
             this.animation4 = 'out';
-
-            this.showDropdown1 = true;
-            this.showDropdown2 = false;
-            this.showDropdown3 = false;
-            this.showDropdown4 = false;
 
             this.dropdownNavbarOffsetLeft1 = event.currentTarget.offsetLeft;
 
@@ -124,11 +104,6 @@ export class NavbarComponent implements OnChanges{
             this.animation3 = 'out';
             this.animation4 = 'out';
 
-            this.showDropdown1 = false;
-            this.showDropdown2 = true;
-            this.showDropdown3 = false;
-            this.showDropdown4 = false;
-
             this.dropdownNavbarOffsetLeft2 = event.currentTarget.offsetLeft;
 
             if(this.animation2 === 'out') {
@@ -140,11 +115,6 @@ export class NavbarComponent implements OnChanges{
             this.animation3 = (this.animation3 === 'out' || typeof(this.animation3) !== 'string')? 'in' : 'out'
             this.animation4 = 'out';
 
-            this.showDropdown1 = false;
-            this.showDropdown2 = false;
-            this.showDropdown3 = true;
-            this.showDropdown4 = false;
-
             this.dropdownNavbarOffsetLeft3 = event.currentTarget.offsetLeft;
 
             if(this.animation3 === 'out') {
@@ -155,11 +125,6 @@ export class NavbarComponent implements OnChanges{
             this.animation2 = 'out';
             this.animation3 = 'out'
             this.animation4 = (this.animation4 === 'out' || typeof(this.animation4) !== 'string')? 'in' : 'out'
-
-            this.showDropdown1 = false;
-            this.showDropdown2 = false;
-            this.showDropdown3 = false;
-            this.showDropdown4 = true;
 
             this.dropdownNavbarOffsetLeft4 = event.currentTarget.offsetLeft;
 
