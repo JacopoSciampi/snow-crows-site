@@ -112,4 +112,19 @@ export const footerAnimations = [
       transition('in => out', animate('400ms ease-in-out')),
       transition('out => in', animate('400ms ease-in-out'))
     ]),
+    trigger('sio8', [
+      state('in', style({
+        overflow: 'hidden',
+        height: '177px',
+        width: '180px'
+      })),
+      state('out', style({
+        opacity: '0',
+        overflow: 'hidden',
+        height: '0px',
+        width: '180px'
+      })),
+      transition('in => out', animate('400ms ease-in-out')),
+      transition('out => in', animate('400ms ease-in-out'))
+    ]),
   ]

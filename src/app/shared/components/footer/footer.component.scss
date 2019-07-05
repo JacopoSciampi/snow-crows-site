@@ -12,55 +12,59 @@
 
 .cards {
   padding-top: 15px;
+}
 
-  .card-title {
-    font-size: 20px;
+.card-title {
+  font-size: 20px;
+}
+
+.card-list {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.card-footer {
+  margin-left: 3px;
+}
+
+.card {
+  margin-right: 10px;
+  width: 110px;
+  border: 1px solid #191919;
+  border-radius: 15px;
+  height: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 3px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #8c8c8c1f;
   }
+}
 
-  .card-list {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-  }
+.rounded-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
 
-  .card {
-    margin-right: 10px;
-    width: 110px;
-    border: 1px solid #191919;
-    border-radius: 15px;
-    height: 26px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0px 3px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+.rounded-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
 
-    &:hover {
-      background-color: #8c8c8c1f;
-    }
-  }
-
-  .rounded-icon {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-
-  .rounded-img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 8px;
-  }
-
-  .card-name {
-    margin-left: 8px;
-  }
+.card-name {
+  margin-left: 8px;
 }
 
 .modal-2 {
@@ -202,4 +206,114 @@
 
 .ad-info {
   font-size: 15px;
+}
+
+.sponsor {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px 0px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  .sponsor-image-patreon {
+    margin-right: 15px;
+    width: 217px;
+    height: 55px;
+    transition: all .3s ease-in-out;
+    background: url('./buttons/patreon_button.jpg');
+    cursor: pointer;
+
+    &:hover {
+      background: url('./buttons/patreon_button_hover.jpg');
+    }
+  }
+
+  .sponsor-image-paypal {
+    margin-right: 15px;
+    width: 217px;
+    height: 55px;
+    transition: all .3s ease-in-out;
+    background: url('./buttons/paypal_button.jpg');
+    cursor: pointer;
+
+    &:hover {
+      background: url('./buttons/paypal_button_hover.jpg');
+    }
+  }
+
+  .sponsor-image-pof {
+    margin-right: 15px;
+    width: 217px;
+    height: 55px;
+    transition: all .3s ease-in-out;
+    background: url('./buttons/pof_button.jpg');
+    cursor: pointer;
+
+    &:hover {
+      background: url('./buttons/pof_button_hover.jpg');
+    }
+  }
+}
+
+.last-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 0px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.info {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+
+
+/* Custom style to replace SVG */ 
+.heart { 
+  color: rgb(236, 104, 104);
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
 }

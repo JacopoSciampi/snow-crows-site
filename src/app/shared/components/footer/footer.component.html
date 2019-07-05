@@ -84,6 +84,34 @@
 
         With the amount of daily viewers we have, this gets expensive! Hit the donate button below or elect to be a patreon to help us out with maintaining the server.
     </div>
+    <div class="spacer">
+      <div class="white-hr"></div>
+    </div>
+    <div class="sponsor">
+      <div class="sponsor-image-patreon" (click)="openLink('https://www.patreon.com/snowcrows/posts')"></div>
+      <div class="sponsor-image-paypal" (click)="openLink('https://www.paypal.me/snowcrowsgaming')"></div>
+      <div class="sponsor-image-pof" (click)="openLink('https://send.onenetworkdirect.net/z/617197/CD242393/')"></div>
+    </div>
+    <div class="spacer">
+      <div class="white-hr"></div>
+    </div>
+    <div class="last-info">
+      <div class="info">
+        If you're interested in helping out with this project, no matter how small (or big), please contact us on discord.
+      </div>
+      <div class="thanks">
+        Made with <div class="heart">♥</div> by
+        <div class="card card-footer" (click)="openCardDetail(7, $event)">
+          <div class="rounded-icon">
+            <img class="rounded-img" alt="Jeko" title="Jeko" [src]="photoUrl8">
+          </div>
+          <div class="card-name">
+              Jeko
+          </div>
+        </div>
+          Maintained by Target.
+      </div>
+    </div>
   </div>
   <!--
     START DINAMIC CONTENT
@@ -322,6 +350,40 @@
         </div>
         <div class="desc">
           <span class="link" (click)="openLink('https://www.youtube.com/c/Mujugw')">Muju</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-3" [ngStyle]="{'left.px': modalOffsetLeft8, 'top.px': modalOffsetTop8, 'background-image': 'url(' + blurUrl8 + ')'}" [@sio8]="animation8">
+    <div class="modal-image">
+      <img alt="Jeko" title="Jeko" [src]="photoUrl8" class="modal-rounded-image">
+    </div>
+    <div class="modal-title-name">
+      Jeko
+    </div>
+    <div class="modal-links">
+      <div class="single-link">
+        <div class="small-icon">
+            <img alt="User" title="User" [src]="photoUser" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          TheBrickSlayer.3817
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Youtube" title="Youtube" [src]="photoYoutube" class="small-icon">
+        </div>
+        <div class="desc">
+          <span class="link" (click)="openLink('https://www.youtube.com/channel/UCZiWE7fs2W6QCmsJXCnavuw')">TheBrickSlayer</span>
+        </div>
+      </div>
+      <div class="single-link margin-top">
+        <div class="small-icon">
+            <img alt="Discord" title="Discord" [src]="photoDiscord" class="small-icon">
+        </div>
+        <div class="desc selectable">
+          Jeko#3533
         </div>
       </div>
     </div>
