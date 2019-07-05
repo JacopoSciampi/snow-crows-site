@@ -6,3 +6,5 @@
 <div class="content"></div>
 <app-home-info [isMobileView]="isMobileView"></app-home-info>
 <app-footer [isMobileView]="isMobileView"></app-footer>
+
+<app-cookie *ngIf="!cookiesAccepted" [isMobileView]="isMobileView"></app-cookie>

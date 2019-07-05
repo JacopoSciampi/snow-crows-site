@@ -1,0 +1,13 @@
+<ng-container *ngIf="!isMobileView">
+    <div class="fixed-bottom">
+        <div class="left-info">
+            This website uses cookies to ensure you get the best experience on our website.
+            <span class="link" (click)="navigateTo('http://www.whatarecookies.com/');">Lean more.</span>
+        </div>
+        <div class="right">
+            <div class="button" (click)="acceptCookie()">
+                Got it!
+            </div>
+        </div>
+    </div>
+</ng-container>
